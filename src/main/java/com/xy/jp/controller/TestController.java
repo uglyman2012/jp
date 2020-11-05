@@ -22,7 +22,7 @@ public class TestController {
     private RabbitTemplate rabbitTemplate;
     @RequestMapping(value = "/test")
     public String test(){
-        return "sucess_hello111";
+        return "sucess_hello";
     }
 
     //@RequestMapping(value = "/test2")
