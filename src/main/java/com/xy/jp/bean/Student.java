@@ -12,10 +12,6 @@ public class Student {
     private Integer age;
     private String name;
 
-    public Student(Integer age, String name) {
-        this.age = age;
-        this.name = name;
-    }
 
     public Integer getAge() {
         return age;
