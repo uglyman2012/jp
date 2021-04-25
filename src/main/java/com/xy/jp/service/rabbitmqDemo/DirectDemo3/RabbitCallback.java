@@ -1,4 +1,4 @@
-package com.xy.jp.service.rabbitmqDemo.demo3;
+package com.xy.jp.service.rabbitmqDemo.DirectDemo3;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +27,7 @@ public class RabbitCallback implements RabbitTemplate.ReturnCallback {
     @PostConstruct
     public void init() {
          //也可以通过这种方式配置
-         rabbitTemplate.setMandatory(true);
+         //rabbitTemplate.setMandatory(true);
 
         // 每个RabbitTemplate只能设置一个RabbitTemplate.ReturnCallback
         rabbitTemplate.setReturnCallback(this);

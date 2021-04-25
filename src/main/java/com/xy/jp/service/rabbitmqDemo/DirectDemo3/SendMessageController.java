@@ -1,4 +1,4 @@
-package com.xy.jp.service.rabbitmqDemo.demo3;
+package com.xy.jp.service.rabbitmqDemo.DirectDemo3;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

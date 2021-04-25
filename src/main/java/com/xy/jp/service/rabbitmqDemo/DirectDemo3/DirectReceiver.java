@@ -1,4 +1,4 @@
-//package com.xy.jp.service.rabbitmqDemo.demo3;
+//package com.xy.jp.service.rabbitmqDemo.DirectDemo3;
 //
 //import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 //import org.springframework.amqp.rabbit.annotation.RabbitListener;
