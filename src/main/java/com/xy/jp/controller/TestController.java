@@ -22,6 +22,7 @@ public class TestController {
     private RabbitTemplate rabbitTemplate;
     @RequestMapping(value = "/test")
     public String test(){
+        System.out.println("2");
         return "1";
     }
 
