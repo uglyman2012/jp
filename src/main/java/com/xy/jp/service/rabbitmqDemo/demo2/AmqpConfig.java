@@ -23,6 +23,7 @@ public class AmqpConfig {
 
     @Resource
     private RabbitTemplate rabbitTemplate;
+
     //@Bean
     //public CachingConnectionFactory rabbitConnectionFactory() {
     //    CachingConnectionFactory connectionFactory = new CachingConnectionFactory("10.68.244.130");
@@ -74,6 +75,7 @@ public class AmqpConfig {
 
     /**
      * 队列 关联 路由key 关联 交换机
+     *
      * @return
      */
     @Bean

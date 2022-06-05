@@ -23,12 +23,12 @@ public class RabbitUtils {
     private static final Logger logger = LoggerFactory.getLogger(RabbitUtils.class);
 
 
-    public static void sendModifyRemakeNameMsg(RabbitTemplate rabbitTemplate, RabbitFriend rabbitFriend){
-        try{
-            if(rabbitFriend.getLists().size() < 1){
+    public static void sendModifyRemakeNameMsg(RabbitTemplate rabbitTemplate, RabbitFriend rabbitFriend) {
+        try {
+            if (rabbitFriend.getLists().size() < 1) {
                 return;
             }
-            logger.info("sendModifyRemakeNameMsg request:"+JSON.toJSONString(rabbitFriend));
+            logger.info("sendModifyRemakeNameMsg request:" + JSON.toJSONString(rabbitFriend));
             CorrelationData correlationDataId = new CorrelationData(UUID.randomUUID().toString());
             rabbitTemplate.convertAndSend(
                     AmqpConstant.MODIFY_FRIEND_REMAKE_NAME_DIRECT_EXCHANGE,
@@ -36,8 +36,8 @@ public class RabbitUtils {
                     rabbitFriend,
                     correlationDataId
             );
-        }catch (Exception e){
-            logger.info("mq消息发送错误",e);
+        } catch (Exception e) {
+            logger.info("mq消息发送错误", e);
         }
     }
 

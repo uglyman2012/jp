@@ -15,8 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class redisService {
     @Autowired
-    private RedisTemplate<Object,Object> redisTemplate;
-    public void redisTest1(){
-        redisTemplate.opsForValue().set("22","pppoii");
+    private RedisTemplate<Object, Object> redisTemplate;
+
+    public void redisTest1() {
+        redisTemplate.opsForValue().set("22", "pppoii");
     }
 }

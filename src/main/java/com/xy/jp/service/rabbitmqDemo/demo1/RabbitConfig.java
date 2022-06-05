@@ -25,13 +25,15 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitConfig {
     @Bean
     public Queue helloQueue() {
-        return new Queue("hello",true);
+        return new Queue("hello", true);
     }
+
     @Bean
     DirectExchange TestDirectExchange() {
         //  return new DirectExchange("TestDirectExchange",true,true);
-        return new DirectExchange("TestDirectExchange",true,false);
+        return new DirectExchange("TestDirectExchange", true, false);
     }
+
     @Bean
     Binding bindingDirect() {
         return BindingBuilder.bind(helloQueue()).to(TestDirectExchange()).with("TestDirectRouting_1213");
@@ -43,6 +45,7 @@ public class RabbitConfig {
         template.setMessageConverter(new Jackson2JsonMessageConverter());
         return template;
     }
+
     @Bean
     public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
@@ -52,10 +55,11 @@ public class RabbitConfig {
     }
 
     @Bean
-    public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory){
+    public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory) {
         RabbitAdmin rabbitAdmin = new RabbitAdmin(connectionFactory);
         return rabbitAdmin;
     }
+
     @Bean
     public CachingConnectionFactory rabbitConnectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory("10.68.244.130");

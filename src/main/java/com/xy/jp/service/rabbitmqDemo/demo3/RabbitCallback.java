@@ -26,8 +26,8 @@ public class RabbitCallback implements RabbitTemplate.ReturnCallback {
 
     @PostConstruct
     public void init() {
-         //也可以通过这种方式配置
-         rabbitTemplate.setMandatory(true);
+        //也可以通过这种方式配置
+        rabbitTemplate.setMandatory(true);
 
         // 每个RabbitTemplate只能设置一个RabbitTemplate.ReturnCallback
         rabbitTemplate.setReturnCallback(this);

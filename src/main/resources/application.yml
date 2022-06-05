@@ -10,7 +10,7 @@ spring:
     password: 123456
     publisher-confirms: true  #手动确认
     publisher-returns: true
-#    virtualHost: /        #虚拟机路径
+    #    virtualHost: /        #虚拟机路径
     template:
       mandatory: true
       retry:
@@ -30,3 +30,8 @@ redis:
       max-idle: 20
       min-idle: 0
       max-wait: 5s
+yl:
+  platform:
+    id:
+      zk-url: 192.168.1.212:2181,192.168.1.212:2182,192.168.1.212:2183
+

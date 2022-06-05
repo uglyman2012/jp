@@ -7,6 +7,7 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 /**
  * <p>
  *
@@ -27,14 +28,14 @@ public class DirectRabbitConfig {
         //   return new Queue("TestDirectQueue",true,true,false);
 
         //一般设置一下队列的持久化就好,其余两个就是默认false
-        return new Queue("TestDirectQueue",true);
+        return new Queue("TestDirectQueue", true);
     }
 
     //Direct交换机 起名：TestDirectExchange
     @Bean
     DirectExchange TestDirectExchange() {
         //  return new DirectExchange("TestDirectExchange",true,true);
-        return new DirectExchange("TestDirectExchange",true,false);
+        return new DirectExchange("TestDirectExchange", true, false);
     }
 
     //绑定  将队列和交换机绑定, 并设置用于匹配键：TestDirectRouting
@@ -42,7 +43,6 @@ public class DirectRabbitConfig {
     Binding bindingDirect() {
         return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("TestDirectRouting");
     }
-
 
 
     @Bean

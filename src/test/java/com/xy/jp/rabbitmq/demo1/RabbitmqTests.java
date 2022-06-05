@@ -22,7 +22,7 @@ public class RabbitmqTests {
     private Sender sender;
 
     @Test
-    public void test1(){
+    public void test1() {
         sender.send();
     }
 }

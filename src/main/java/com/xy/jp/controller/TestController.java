@@ -20,8 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
     @RequestMapping(value = "/test")
-    public String test(){
+    public String test() {
         return "111";
     }
 

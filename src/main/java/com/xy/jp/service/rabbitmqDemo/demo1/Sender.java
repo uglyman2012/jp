@@ -20,8 +20,8 @@ public class Sender {
     private RabbitTemplate rabbitTemplate;
 
     public void send() {
-        for (int i = 0; i <20 ; i++) {
-            this.rabbitTemplate.convertAndSend ("hello", new Persion("zhangsn"+i,new Date()));
+        for (int i = 0; i < 20; i++) {
+            this.rabbitTemplate.convertAndSend("hello", new Persion("zhangsn" + i, new Date()));
 
         }
     }

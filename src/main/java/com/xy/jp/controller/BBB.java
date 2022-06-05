@@ -8,12 +8,12 @@ package com.xy.jp.controller;
  * @author yang
  * @since 2020/09/17
  */
-public class BBB implements Cloneable{
+public class BBB implements Cloneable {
     private String name;
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        BBB bbb=(BBB)super.clone();
+        BBB bbb = (BBB) super.clone();
         return bbb;
     }
 
